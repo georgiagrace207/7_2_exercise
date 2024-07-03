@@ -1,0 +1,32 @@
+# NOTE: Due to the Rivanna outage and other resulting tech issues, today I made an effort to follow along and
+# practice writing the code had my Rivanna been working properly. (I will formally add these once I am able.)
+# Thank you for your understanding. 
+
+cd DS5100-2024-06-R
+git clone https://github.com/georgiagrace207/7_2_exercise
+
+mkdir mypackage
+cd mypackage
+touch __init___.py
+touch mymodule.py
+
+def addition_function(value):
+    '''Print the sum of s plus 1'''
+    answer = value + 1
+    print(answer)
+
+print("Successfully imported init package")
+
+
+from setuptools import setup
+
+setup(
+    name='Demo',
+    version = '0.1',
+    description='A simple demonstration package',
+    url = 'http://github.com/georgiagrace207/7_1_exercise'
+    license='MIT',
+    packages=['mypackage']
+)
+
+pip install -e
